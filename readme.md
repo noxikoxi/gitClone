@@ -177,5 +177,6 @@ gitc merge remote/heads/master
 ```bash
 gitc push PATH BRANCH
 ```
-Remote Repostiory History
+Remote Repository History
+
 ![Remote Repository History](./readmeAssets/remote_repository.png)
