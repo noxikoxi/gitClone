@@ -263,6 +263,7 @@ def get_oid(name):
 
 def get_commit(oid):
     parents = []
+    tree = ""
 
     commit = data.get_object(oid, 'commit').decode()
     lines = iter(commit.splitlines())
@@ -274,7 +275,7 @@ def get_commit(oid):
             parents.append(value)
         else:
             assert False, f'Unknown field {key}'
-
+    
     message = "\n".join(lines)
     return Commit(tree=tree, parents=parents, message=message)
 

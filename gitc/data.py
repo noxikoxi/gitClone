@@ -104,7 +104,7 @@ def hash_object(data, type_='blob'):
 
 def get_object(oid, expected='blob'):
     try:
-        with open(os.path.join(GIT_DIR,"objects",oid), 'rb') as f:
+        with open(os.path.join(GIT_DIR, "objects", str(oid)), 'rb') as f:
             obj = f.read()
     except(FileNotFoundError):
         return b''
